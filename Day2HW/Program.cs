@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-//A  +  A    -> A, O
-//A  +  B	   -> A, B, AB, O
-//A  +  AB   -> A, B, AB
-//A  +  O	   -> A, O
-//B  +  B	   -> B, O
-//B  +  AB   -> A, B, AB
-//B  +  O	   -> B, O
+//A  +  A   -> A, O
+//A  +  B	-> A, B, AB, O
+//A  +  AB  -> A, B, AB
+//A  +  O	-> A, O
+//B  +  B	-> B, O
+//B  +  AB  -> A, B, AB
+//B  +  O	-> B, O
 //AB +  AB  -> A, B, AB
 //AB +  O   -> A, B
-//O  +  O	   -> O
+//O  +  O	-> O
 
 namespace Day2HW
 {
@@ -26,11 +22,6 @@ namespace Day2HW
             Console.WriteLine("Type your mother's blood type : ");
             String motherBType = Console.ReadLine().ToUpper();
             Console.WriteLine("Your Child's possible Blood Groups are : ");
-
-
-
-
-            
 
             if (fatherBType == "AB" || motherBType == "AB")
             {
@@ -45,12 +36,11 @@ namespace Day2HW
             }
             else
             {
-               
                 //must print if both of them not AB
                 Console.WriteLine(fatherBType);
 
                 //no need to print again if both same
-                if(fatherBType != motherBType)
+                if (fatherBType != motherBType)
                 {
                     Console.WriteLine(motherBType);
                     if (fatherBType != "O" && motherBType != "O")
@@ -58,7 +48,7 @@ namespace Day2HW
                         Console.WriteLine("O");
                         Console.WriteLine("AB");
                     }
-                    
+
 
                 }
                 else
@@ -69,12 +59,7 @@ namespace Day2HW
                         Console.WriteLine("O");
                     }
                 }
-
-              
-
-
             }
-
         }
     }
 }
